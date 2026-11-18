@@ -14,6 +14,10 @@ COPY . .
 ARG VITE_API_URL=http://localhost:3000
 ENV VITE_API_URL=$VITE_API_URL
 
+ARG APP_ENV=production
+ENV VITE_APP_ENV=$APP_ENV
+
+
 RUN npm run build
 
 # 2. Serve the built files with nginx

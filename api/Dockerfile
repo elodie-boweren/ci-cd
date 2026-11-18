@@ -2,6 +2,9 @@ FROM node:22-alpine
 
 WORKDIR /app
 
+ARG APP_ENV=production
+ENV NODE_ENV=$APP_ENV
+
 # Dump tools used by the backups: pg_dump (PostgreSQL 16) and mariadb-dump (MySQL)
 RUN apk add --no-cache postgresql16-client mysql-client mariadb-connector-c
 
