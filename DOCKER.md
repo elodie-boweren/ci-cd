@@ -18,7 +18,7 @@ This project uses docker compose for a fast and efficient management of containe
 
 First, check that docker is installed properly: `docker --version`. 
 
-Once you get a reply to that command, you can enter `docker compose up --build -d` to build the frontend and backend images from their Dockerfiles, install all dependencies and run all the services set in the Docker Compose: frontend, API, PostgreSQL, MySQL and MongoDB.
+Once you get a reply to that command, you can enter `docker compose up --build -d` to build the frontend and backend images from their Dockerfiles, install all dependencies and run all the services set in the Docker Compose: frontend, API, PostgreSQL, and MySQL.
 
 The application is then available at http://localhost:5173.
 

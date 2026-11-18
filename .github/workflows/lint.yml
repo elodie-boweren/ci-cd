@@ -1,19 +1,29 @@
-name : Lint
+name: Lint
 
 on:
   push:
-    branches:
-      - '**'
+    branches-ignore: [main]   # main est géré par ci-cd.yml
+
 concurrency:
   group: lint-${{ github.ref }}
   cancel-in-progress: true
 
 jobs:
   oxlint:
+    name: Lint (${{ matrix.app }})
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        app: [api, frontend]
+    defaults:
+      run:
+        working-directory: ${{ matrix.app }}
     steps:
       - uses: actions/checkout@v7
       - uses: actions/setup-node@v7
-        with: { node-version:22 }
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: ${{ matrix.app }}/package-lock.json
+      - run: npm ci
       - run: npm run lint
-
