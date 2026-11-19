@@ -2,7 +2,7 @@ name: Lint
 
 on:
   push:
-    branches-ignore: [main]   # main est géré par ci-cd.yml
+    branches-ignore: [main]   
 
 concurrency:
   group: lint-${{ github.ref }}
