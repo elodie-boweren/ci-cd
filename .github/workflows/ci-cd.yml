@@ -27,6 +27,7 @@ jobs:
       error: ${{ steps.error.outputs.log }}
     defaults:
       run:
+        shell: bash
         working-directory: api
     steps:
       - uses: actions/checkout@v7
@@ -55,6 +56,7 @@ jobs:
       error: ${{ steps.error.outputs.log }}
     defaults:
       run:
+        shell: bash
         working-directory: frontend
     steps:
       - uses: actions/checkout@v7

@@ -25,7 +25,7 @@ describe('protected pages', () => {
   test('without a session -> redirected to the login page (US00-08)', () => {
     renderAt('/dashboard')
 
-    expect(screen.getByText('Page de connexion')).not.toBeInTheDocument()
+    expect(screen.getByText('Page de connexion')).toBeInTheDocument()
     expect(screen.queryByText('Page dashboard')).not.toBeInTheDocument()
   })
 
