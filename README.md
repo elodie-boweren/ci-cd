@@ -119,16 +119,6 @@ At the end of every run, a message is posted to a Google Chat space through a we
 * Pushing to GHCR uses the built-in `GITHUB_TOKEN` (`packages: write` permission is set in the workflow); no extra secret is needed.
 * After the first push, set each package to **Public** (GitHub profile › Packages › package settings).
 
-### Running the workflows locally
-
-Workflows can be tested locally with [act](https://github.com/nektos/act):
-
-```bash
-act pull_request -s GOOGLE_CHAT_WEBHOOK=<url>
-```
-
-The GHA cache and the push to GHCR are not supported by `act`.
-
 ---
 
 ## Creating a Release
