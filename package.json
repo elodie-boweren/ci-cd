@@ -1,0 +1,28 @@
+{
+  "name": "ci-cd",
+  "version": "1.0.0",
+  "description": "![CI/CD](https://github.com/elodie-boweren/ci-cd/actions/workflows/ci-cd.yml/badge.svg)",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prepare": "husky"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/elodie-boweren/ci-cd.git"
+  },
+  "keywords": [],
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/elodie-boweren/ci-cd/issues"
+  },
+  "homepage": "https://github.com/elodie-boweren/ci-cd#readme",
+  "devDependencies": {
+    "@commitlint/cli": "^21.2.4",
+    "@commitlint/config-conventional": "^21.2.4",
+    "husky": "^9.1.7"
+  }
+}

@@ -14,10 +14,6 @@ concurrency:
 permissions:
   contents: read
 
-defaults:
-  run:
-    shell: bash       
-
 jobs:
   # TESTS
   test-api:
