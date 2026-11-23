@@ -101,7 +101,7 @@ docker pull ghcr.io/elodie-boweren/ci-cd-frontend:latest
 
 At the end of every run, a message is posted to a Google Chat space through a webhook. It contains:
 
-* the status: ✅ success, ❌ failure or ⚠️ cancelled;
+* the status: success, failure or cancelled;
 * the branch or tag;
 * the commit: short SHA, message and author;
 * the result of each job;
